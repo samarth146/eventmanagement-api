@@ -11,4 +11,6 @@ import java.lang.String;
 
 public interface ParticipantRepository extends PagingAndSortingRepository<Participant, Long> {
 	Page<Participant> findByEmail(@Param("email") String email, Pageable pageable);
+
+	Participant findByEmail(String emailId);
 }
